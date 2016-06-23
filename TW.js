@@ -9,10 +9,11 @@ TW.pick = function(arr) {
 
 TW.randomColorArray = function(numColors) {
     var arr = [];
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
+    var r, g, b;
     for(var i=0; i<numColors; i++) {
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
         arr.push('rgb(' + r + ',' + g + ',' + b + ')');
     }
     return arr;
