@@ -1,6 +1,6 @@
 window.TW = window.TW || {};
 
-var TW = window.TW
+var TW = window.TW;
 
 TW.pick = function(arr) {
     var i = Math.floor(Math.random() * arr.length);
@@ -38,4 +38,19 @@ TW.randomColorGroup = function() {
     var group = TW.pick(themes);
 
     return TW.colors[group];
+};
+
+TW.scale = function(numFrom, numTo) {
+    var i = numFrom;
+    var result = [];
+    while(i != numTo) {
+        result.push(i);
+        if(numTo > i) {
+            i++;
+        } else if (numTo < i) {
+            i--;
+        }
+    }
+
+    return result;
 };
